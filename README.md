@@ -1,5 +1,6 @@
 <img width="1906" height="879" alt="image" src="https://github.com/user-attachments/assets/430f2981-b719-467c-bd02-fcf324e1190b" />
 Weather Atlas
+
 A responsive React weather app built with Vite and TypeScript. It lets you search for a city, view current conditions, and scan a seven-day forecast in a clean dashboard layout.
 
 Features
