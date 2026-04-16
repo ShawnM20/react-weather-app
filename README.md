@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+<img width="1906" height="879" alt="image" src="https://github.com/user-attachments/assets/430f2981-b719-467c-bd02-fcf324e1190b" />
+Weather Atlas
+A responsive React weather app built with Vite and TypeScript. It lets you search for a city, view current conditions, and scan a seven-day forecast in a clean dashboard layout.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Search for weather by city name
+Automatic local weather on first load when location access is allowed
+Current conditions with temperature, feels-like temperature, humidity, and wind
+Seven-day forecast with highs, lows, and rain chance
+Fahrenheit and Celsius toggle
+Responsive layout for desktop and mobile
+Tech Stack
+React
+TypeScript
+Vite
+Open-Meteo APIs
+Tailwind CSS utilities with custom CSS styling
+Getting Started
+1. Install dependencies
+Open a terminal in the project folder:
 
-Currently, two official plugins are available:
+cd C:\Users\shawn\Documents\react-weather-app
+npm.cmd install
+2. Start the development server
+npm.cmd run dev
+Then open the local URL shown in the terminal, usually:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+http://localhost:5173
 
-## React Compiler
+Available Scripts
+Run the app locally
+npm.cmd run dev
+Starts the Vite development server.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Build for production
+npm.cmd run build
+Creates an optimized production build in dist/.
 
-## Expanding the ESLint configuration
+Preview the production build
+npm.cmd run preview
+Runs a local preview of the built app.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Lint the project
+npm.cmd run lint
+Checks the codebase with ESLint.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+How To Use
+View local weather
+When the app opens, allow browser location access if you want to see weather for your current location automatically.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Search for a city
+Use the search bar to look up any city by name, such as Boston, Tokyo, or Nairobi.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Change temperature units
+Use the unit toggle to switch between Fahrenheit and Celsius.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Read the forecast
+The main panel shows current conditions.
+The forecast panel shows the next seven days with daily highs, lows, and precipitation chance.
+Data Source
+This app uses free weather and geocoding data from:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Open-Meteo Forecast API
+Open-Meteo Geocoding API
+Project Structure
+src/
+  App.tsx
+  App.css
+  index.css
+  components/
+    CurrentWeather.tsx
+    SearchBar.tsx
+  types/
+    weather.ts
+Notes
+Internet access is required for weather data to load.
+If location access is denied, you can still search for any city manually.
+The app currently uses the first matching city returned by the geocoding search.
+Future Ideas
+Hourly forecast
+Saved recent searches
+Weather icons or animated backgrounds
+Better handling for multiple city matches
